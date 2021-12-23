@@ -268,6 +268,26 @@ address {
 .practice-link:not(:last-child) {
   margin-right: 30px;
 }
+.practice-box {
+  position: relative;
+}
+.label-box {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 27px 82px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.label-text {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
 /*Team section*/
 .company-desc {
   font-weight: 700;
@@ -568,9 +588,11 @@ address {
   bottom: 0;
 
   height: 100%;
-  padding: 24px 63px;
-  background-color: var(--accent-color);
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
 }
+
 .description {
   font-family: Roboto;
   font-size: 18px;
@@ -607,10 +629,13 @@ address {
 }
 .work-link:hover,
 .work-link:focus {
+  opacity: 1;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-
+.work-link:hover .work-decription {
+  opacity: 1;
+}
 /*=====Portfolio ends====*/
 /*=====Modal-window======*/
 .backdrop {

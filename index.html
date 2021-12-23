@@ -45,7 +45,7 @@
         <!--Шапка-->
         <section class="hero-container overlay">
             <h1 class="hero-title">Эффективные решения <br> для вашего бизнеса</h1>
-            <button type="button" class="btn-active">Заказать услугу</button>
+            <button type="button" class="btn-active" data-modal-open>Заказать услугу</button>
         </section>
         <!--Особенности-->
         
@@ -331,16 +331,17 @@
 
         </div>
         </footer>
-        <div class="backdrop">
+
+
+        <div class="backdrop is-hidden" data-modal>
             <div class="modal">
-            <button class="cross">
-                <svg class="cross-btn">
-                    <use href="./images/cross.svg#cross"></use>
-                </svg>
-                </div>
+            <button class="cross" data-modal-close>
+                <svg width="18px" class="cross-btn">
+                 <use href="./images/cross.svg#cross"></use>
+                 </svg>
             </button>
         </div>
-
+</div>
 
 
         <script src="./js/modal.js"></script>

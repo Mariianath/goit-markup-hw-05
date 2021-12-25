@@ -121,7 +121,7 @@ address {
   content: '';
   position: absolute;
   right: 0%;
-  bottom: 0px;
+  bottom: -1px;
 
   width: 100%;
   height: 4px;
@@ -611,6 +611,8 @@ address {
   width: 100%;
   height: 100%;
   color: var(--primary-text-color);
+
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .work-thumb {
   position: relative;
@@ -680,12 +682,16 @@ address {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.1);
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: visible;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 
 .backdrop.is-hidden .modal {
@@ -707,8 +713,8 @@ address {
 }
 .cross {
   position: absolute;
-  top: 14px;
-  right: 14px;
+  top: 8px;
+  right: 8px;
 
   display: flex;
   align-items: center;
@@ -723,6 +729,8 @@ address {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cross-btn {
